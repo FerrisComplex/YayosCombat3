@@ -15,8 +15,9 @@ internal class patch_ReloadableUtility_WearerOf
         {
             return __result;
         }
+        
 
-        if (reloadable is CompApparelReloadable o && o.ParentHolder is Pawn_EquipmentTracker equipmentTracker)
+        if (reloadable is CompApparelReloadable o && o.ParentHolder is Pawn_EquipmentTracker equipmentTracker && equipmentTracker.pawn != null)
         {
             __result = equipmentTracker.pawn;
         }

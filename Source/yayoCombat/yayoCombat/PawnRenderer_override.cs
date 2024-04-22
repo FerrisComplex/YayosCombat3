@@ -14,13 +14,13 @@ public static class PawnRenderer_override
     {
         if (!yayoCombat.advAni)
         {
-            instance.DrawEquipmentAiming(eq, drawLoc, aimAngle);
+            PawnRenderUtility.DrawEquipmentAiming(eq, drawLoc, aimAngle);
             return;
         }
 
         if (yayoCombat.using_meleeAnimations && eq.def.IsMeleeWeapon)
         {
-            instance.DrawEquipmentAiming(eq, drawLoc, aimAngle);
+            PawnRenderUtility.DrawEquipmentAiming(eq, drawLoc, aimAngle);
             return;
         }
 

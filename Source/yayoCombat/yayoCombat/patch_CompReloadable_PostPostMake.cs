@@ -5,13 +5,14 @@ using Verse;
 
 namespace yayoCombat;
 
-[HarmonyPatch(typeof(CompReloadable), "PostPostMake")]
-internal class patch_CompReloadable_PostPostMake
+[HarmonyPatch(typeof(CompApparelVerbOwner_Charged), "PostPostMake")]
+internal class patch_CompApparelVerbOwner_Charged_PostPostMake
 {
     [HarmonyPostfix]
     [HarmonyPriority(0)]
-    private static void Postfix(CompReloadable __instance, ref int ___remainingCharges)
+    private static void Postfix(CompApparelVerbOwner_Charged __instance, ref int ___remainingCharges)
     {
+        
         if (!yayoCombat.ammo || !__instance.parent.def.IsWeapon)
         {
             return;

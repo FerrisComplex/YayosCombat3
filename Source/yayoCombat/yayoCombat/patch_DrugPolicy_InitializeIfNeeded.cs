@@ -79,7 +79,7 @@ internal class patch_DrugPolicy_InitializeIfNeeded
         var list4 = new List<DrugPolicyEntry>();
         foreach (var item4 in allDefsListForReading)
         {
-            if (item4.category == ThingCategory.Item && item4.FirstThingCategory == ThingCategoryDefOf.FoodMeals)
+            if (item4.category == ThingCategory.Item && item4.FirstThingCategory == ThingCategoryDefOf.Foods)
             {
                 list4.Add(new DrugPolicyEntry
                 {

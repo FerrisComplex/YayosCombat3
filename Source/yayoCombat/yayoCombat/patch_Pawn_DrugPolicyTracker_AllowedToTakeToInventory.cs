@@ -18,7 +18,7 @@ internal class patch_Pawn_DrugPolicyTracker_AllowedToTakeToInventory
         if (thingDef.FirstThingCategory == ThingCategoryDef.Named("yy_ammo_category") ||
             yayoCombat.ar_customAmmoDef.Contains(thingDef) ||
             thingDef.FirstThingCategory == ThingCategoryDefOf.Medicine ||
-            thingDef.FirstThingCategory == ThingCategoryDefOf.FoodMeals)
+            thingDef.FirstThingCategory == ThingCategoryDefOf.Foods)
         {
             var drugPolicyEntry = __instance.CurrentPolicy[thingDef];
             __result = !drugPolicyEntry.allowScheduled && drugPolicyEntry.takeToInventory > 0 &&

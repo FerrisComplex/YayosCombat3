@@ -18,13 +18,13 @@ internal class Patch_PawnGenerator_GenerateGearFor
             return;
         }
 
-        var allWeaponsComps = new List<CompReloadable>();
+        var allWeaponsComps = new List<CompApparelReloadable>();
         // get all generated equipped weapons
         if (pawn?.equipment?.AllEquipmentListForReading != null)
         {
             foreach (var thing in pawn.equipment.AllEquipmentListForReading)
             {
-                var comp = thing.GetComp<CompReloadable>();
+                var comp = thing.GetComp<CompApparelReloadable>();
                 if (comp != null && thing.def.IsWeapon)
                 {
                     allWeaponsComps.Add(comp);
@@ -37,7 +37,7 @@ internal class Patch_PawnGenerator_GenerateGearFor
         {
             foreach (var thing in pawn.inventory.innerContainer)
             {
-                var comp = thing.TryGetComp<CompReloadable>();
+                var comp = thing.TryGetComp<CompApparelReloadable>();
                 if (comp != null && thing.def.IsWeapon)
                 {
                     allWeaponsComps.Add(comp);

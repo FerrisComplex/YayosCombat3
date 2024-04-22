@@ -45,7 +45,7 @@ public class patch_Verb_LaunchProjectile_TryCastShot
         if (__instance.EquipmentSource != null)
         {
             __instance.EquipmentSource.GetComp<CompChangeableProjectile>()?.Notify_ProjectileLaunched();
-            __instance.EquipmentSource.GetComp<CompReloadable>()?.UsedOnce();
+            __instance.EquipmentSource.GetComp<CompApparelReloadable>()?.UsedOnce();
         }
 
         var launcher = __instance.caster;
@@ -148,7 +148,7 @@ public class patch_Verb_LaunchProjectile_TryCastShot
         Mathf.Clamp(missRadius, 0.05f, 0.95f);
         if (Rand.Chance(missRadius))
         {
-            resultingLine.ChangeDestToMissWild(shotReport.AimOnTargetChance_StandardTarget);
+            resultingLine.ChangeDestToMissWild_NewTemp(shotReport.AimOnTargetChance_StandardTarget, false, __instance.caster != null ? __instance.caster.Map : localTargetInfo.Thing.Map);
             var targetPawns = ProjectileHitFlags.NonTargetWorld;
             if (Rand.Chance(yayoCombat.s_missBulletHit) && ___canHitNonTargetPawnsNow)
             {

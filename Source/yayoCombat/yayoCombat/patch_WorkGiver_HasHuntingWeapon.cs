@@ -15,10 +15,10 @@ internal class patch_WorkGiver_HasHuntingWeapon
             return __result;
         }
 
-        var comp = p.equipment.Primary.GetComp<CompReloadable>();
+        var comp = p.equipment.Primary.GetComp<CompApparelReloadable>();
         if (comp != null)
         {
-            __result = comp.CanBeUsed;
+            __result = comp.CanBeUsed(out var reason);
         }
 
         return __result;

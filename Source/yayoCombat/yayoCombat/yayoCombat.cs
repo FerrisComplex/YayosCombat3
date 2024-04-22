@@ -489,7 +489,7 @@ public class yayoCombat : ModBase
                     continue;
                 }
 
-                var compProperties_Reloadable = new CompProperties_Reloadable();
+                var compProperties_Reloadable = new CompProperties_ApparelReloadable();
                 var num = verbProperties.burstShotCount /
                           ((verbProperties.ticksBetweenBurstShots * 0.016666f * verbProperties.burstShotCount) +
                            verbProperties.warmupTime +
@@ -498,7 +498,7 @@ public class yayoCombat : ModBase
                 compProperties_Reloadable.maxCharges = Mathf.Max(3, Mathf.RoundToInt(num2 * num * maxAmmo));
                 compProperties_Reloadable.ammoCountPerCharge = 1;
                 compProperties_Reloadable.baseReloadTicks = Mathf.RoundToInt(60f);
-                compProperties_Reloadable.soundReload = SoundDefOf.Standard_Reload;
+                compProperties_Reloadable.soundReload = DefDatabase<SoundDef>.GetNamed("Standard_Reload");
                 compProperties_Reloadable.hotKey = KeyBindingDefOf.Misc4;
                 compProperties_Reloadable.chargeNoun = "ammo";
                 compProperties_Reloadable.displayGizmoWhileUndrafted = true;

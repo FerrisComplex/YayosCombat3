@@ -25,7 +25,7 @@ internal class Patch_DrugPolicy
             s_entriesInt(__instance) = new List<DrugPolicyEntry>();
         }
 
-        Scribe_Values.Look(ref __instance.uniqueId, "uniqueId");
+        Scribe_Values.Look(ref __instance.id, "uniqueId");
         Scribe_Values.Look(ref __instance.label, "label");
         Scribe_Collections.Look(ref s_entriesInt(__instance), "drugs", LookMode.Deep);
         if (Scribe.mode == LoadSaveMode.PostLoadInit && s_entriesInt(__instance) != null &&

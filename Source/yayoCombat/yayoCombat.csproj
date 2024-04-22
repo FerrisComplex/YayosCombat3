@@ -8,6 +8,12 @@
     <LangVersion>latest</LangVersion>
     <FileVersion>1.4.3</FileVersion>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>

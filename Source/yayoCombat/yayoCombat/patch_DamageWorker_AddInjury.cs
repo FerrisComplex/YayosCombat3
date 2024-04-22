@@ -130,7 +130,7 @@ internal class patch_DamageWorker_AddInjury
         var hediffDefFromDamage = HealthUtility.GetHediffDefFromDamage(dinfo.Def, pawn, dinfo.HitPart);
         var hediff_Injury = (Hediff_Injury)HediffMaker.MakeHediff(hediffDefFromDamage, pawn);
         hediff_Injury.Part = dinfo.HitPart;
-        hediff_Injury.source = dinfo.Weapon;
+        hediff_Injury.sourceDef = dinfo.Weapon;
         hediff_Injury.sourceBodyPartGroup = dinfo.WeaponBodyPartGroup;
         hediff_Injury.sourceHediffDef = dinfo.WeaponLinkedHediff;
         hediff_Injury.Severity = totalDamage;

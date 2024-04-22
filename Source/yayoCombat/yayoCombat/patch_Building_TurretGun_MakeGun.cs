@@ -18,7 +18,7 @@ internal class patch_Building_TurretGun_MakeGun
         var removedReload = false;
         for (var i = 0; i < turretGunDef.comps.Count; i++)
         {
-            if (turretGunDef.comps[i].compClass != typeof(CompReloadable))
+            if (turretGunDef.comps[i].compClass != typeof(CompApparelReloadable))
             {
                 continue;
             }

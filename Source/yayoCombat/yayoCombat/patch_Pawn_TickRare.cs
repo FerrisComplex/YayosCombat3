@@ -21,13 +21,13 @@ internal class patch_Pawn_TickRare
         var allEquipmentListForReading = __instance.equipment.AllEquipmentListForReading;
         foreach (var item in allEquipmentListForReading)
         {
-            var compReloadable = item.TryGetComp<CompReloadable>();
-            if (compReloadable == null)
+            var CompApparelReloadable = item.TryGetComp<CompApparelReloadable>();
+            if (CompApparelReloadable == null)
             {
                 continue;
             }
 
-            reloadUtility.tryAutoReload(compReloadable);
+            reloadUtility.tryAutoReload(CompApparelReloadable);
             break;
         }
     }

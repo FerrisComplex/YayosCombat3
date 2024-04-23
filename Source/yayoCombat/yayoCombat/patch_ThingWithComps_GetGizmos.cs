@@ -17,7 +17,6 @@ internal class patch_ThingWithComps_GetGizmos
         if (!yayoCombat.ammo || !PawnAttackGizmoUtility.CanShowEquipmentGizmos()) yield break;
         foreach (var thingWithComps in __instance.AllEquipmentListForReading)
             foreach(var comp in thingWithComps.AllComps)
-                if(comp.ParentHolder is Pawn_ApparelTracker)
                     foreach (var gizmo in comp.CompGetWornGizmosExtra())
                             yield return gizmo;
                 
